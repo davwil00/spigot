@@ -1,0 +1,37 @@
+:root {
+    --CANVAS_WIDTH: 485px;
+    --CANVAS_HEIGHT: 805px;
+    --DROPLET_WIDTH: 126px;
+    --DROPLET_HEIGHT: 150px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#air {
+    flex: 1 0 auto;
+}
+
+#water {
+    background-color: #6fb0dc;
+    height: var(--CANVAS_HEIGHT);
+    flex-shrink: 0;
+    height: 150px;
+    z-index: 1;
+}
+
+.droplet {
+    position: absolute;
+    width: auto;
+    height: var(--DROPLET_HEIGHT);
+    left: calc(50% - calc(var(--DROPLET_WIDTH)/2));
+}
